@@ -38,73 +38,154 @@
 
     <div class="app">
 
-        <h1>StudyBuddy</h1>
+        <!-- HEADER -->
 
-        <p style="text-align: center;">
-            Study smarter. Stay organized. 🎓
-        </p>
+        <div class="app-header">
 
+            <div class="brand-icon">
+                🎓
+            </div>
 
-        <!-- WELCOME -->
-
-        <div class="note">
-
-            <h3>👋 Welcome back!</h3>
+            <h1>
+                StudyBuddy
+            </h1>
 
             <p>
-                Keep learning, stay consistent and
-                reach your study goals.
+                Your personal study companion
             </p>
 
         </div>
 
 
-        <!-- PROGRESS DASHBOARD -->
+        <!-- WELCOME -->
 
-        <div class="note">
+        <div class="note welcome-card">
 
-            <h3>📊 Your Progress</h3>
+            <h3>
+                👋 Welcome back!
+            </h3>
 
-            <p id="dashboardTasks">
-                ✅ Tasks completed: 0
+            <p>
+                Ready to learn something new today?
+                Stay organized, study consistently
+                and reach your goals.
             </p>
 
-            <p id="dashboardNotes">
-                📝 Notes created: 0
-            </p>
+        </div>
 
-            <p id="dashboardQuiz">
-                🧠 Last quiz score: No quiz yet
-            </p>
 
-            <p id="dashboardSessions">
-                ⏱️ Study sessions: 0
-            </p>
+        <!-- PROGRESS -->
+
+        <div class="note progress-card">
+
+            <h3>
+                📊 Your Progress
+            </h3>
+
+            <div class="progress-grid">
+
+                <div class="progress-item">
+
+                    <span class="progress-icon">
+                        ✅
+                    </span>
+
+                    <strong id="dashboardTasks">
+                        0
+                    </strong>
+
+                    <small>
+                        Tasks completed
+                    </small>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <span class="progress-icon">
+                        📝
+                    </span>
+
+                    <strong id="dashboardNotes">
+                        0
+                    </strong>
+
+                    <small>
+                        Notes created
+                    </small>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <span class="progress-icon">
+                        🧠
+                    </span>
+
+                    <strong id="dashboardQuiz">
+                        No quiz
+                    </strong>
+
+                    <small>
+                        Last quiz
+                    </small>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <span class="progress-icon">
+                        ⏱️
+                    </span>
+
+                    <strong id="dashboardSessions">
+                        0
+                    </strong>
+
+                    <small>
+                        Study sessions
+                    </small>
+
+                </div>
+
+            </div>
 
         </div>
 
 
         <!-- MENU -->
 
+        <h2 class="menu-title">
+            Study Tools
+        </h2>
+
+
         <div class="menu">
 
             <button onclick="openNotes()">
-                📝<br>
+                📝
+                <br><br>
                 Notes
             </button>
 
             <button onclick="openTasks()">
-                ✅<br>
+                ✅
+                <br><br>
                 Tasks
             </button>
 
             <button onclick="openQuizzes()">
-                🧠<br>
+                🧠
+                <br><br>
                 Quiz
             </button>
 
             <button onclick="openTimer()">
-                ⏱️<br>
+                ⏱️
+                <br><br>
                 Study Timer
             </button>
 
@@ -113,9 +194,11 @@
 
         <!-- STUDY TIP -->
 
-        <div class="note">
+        <div class="note study-tip">
 
-            <h3>💡 Study Tip</h3>
+            <h3>
+                💡 Today's Study Tip
+            </h3>
 
             <p>
                 Small, consistent study sessions are
@@ -125,22 +208,93 @@
 
         </div>
 
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-item active"
+                onclick="goHome()"
+            >
+                🏠
+                <span>Home</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openNotes()"
+            >
+                📝
+                <span>Notes</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTasks()"
+            >
+                ✅
+                <span>Tasks</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openQuizzes()"
+            >
+                🧠
+                <span>Quiz</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTimer()"
+            >
+                ⏱️
+                <span>Timer</span>
+            </button>
+
+        </nav>
+
+
+        <!-- FOOTER -->
+
+        <p class="app-footer">
+            StudyBuddy • Study smarter 🎓
+        </p>
+
     </div>
 
 
     <script src="app.js"></script>
 
-<script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js")
-        .then(function() {
-            console.log("StudyBuddy service worker registered!");
-        })
-        .catch(function(error) {
-            console.log("Service worker error:", error);
-        });
-}
-</script>
+
+    <script>
+
+        if ("serviceWorker" in navigator) {
+
+            navigator.serviceWorker.register("sw.js")
+
+                .then(function() {
+
+                    console.log(
+                        "StudyBuddy service worker registered!"
+                    );
+
+                })
+
+                .catch(function(error) {
+
+                    console.log(
+                        "Service worker error:",
+                        error
+                    );
+
+                });
+
+        }
+
+    </script>
 
 </body>
+
 </html>
