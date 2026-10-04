@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#4f46e5"
+    >
+
+    <meta
+        name="description"
+        content="StudyBuddy helps students organize notes, tasks, quizzes and study sessions."
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <title>StudyBuddy - Study Smarter</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <h1>StudyBuddy</h1>
+
+        <p style="text-align: center;">
+            Study smarter. Stay organized. 🎓
+        </p>
+
+
+        <!-- WELCOME -->
+
+        <div class="note">
+
+            <h3>👋 Welcome back!</h3>
+
+            <p>
+                Keep learning, stay consistent and
+                reach your study goals.
+            </p>
+
+        </div>
+
+
+        <!-- PROGRESS DASHBOARD -->
+
+        <div class="note">
+
+            <h3>📊 Your Progress</h3>
+
+            <p id="dashboardTasks">
+                ✅ Tasks completed: 0
+            </p>
+
+            <p id="dashboardNotes">
+                📝 Notes created: 0
+            </p>
+
+            <p id="dashboardQuiz">
+                🧠 Last quiz score: No quiz yet
+            </p>
+
+            <p id="dashboardSessions">
+                ⏱️ Study sessions: 0
+            </p>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <div class="menu">
+
+            <button onclick="openNotes()">
+                📝<br>
+                Notes
+            </button>
+
+            <button onclick="openTasks()">
+                ✅<br>
+                Tasks
+            </button>
+
+            <button onclick="openQuizzes()">
+                🧠<br>
+                Quiz
+            </button>
+
+            <button onclick="openTimer()">
+                ⏱️<br>
+                Study Timer
+            </button>
+
+        </div>
+
+
+        <!-- STUDY TIP -->
+
+        <div class="note">
+
+            <h3>💡 Study Tip</h3>
+
+            <p>
+                Small, consistent study sessions are
+                better than trying to learn everything
+                at once.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js")
+        .then(function() {
+            console.log("StudyBuddy service worker registered!");
+        })
+        .catch(function(error) {
+            console.log("Service worker error:", error);
+        });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#4f46e5"
+    >
+
+    <title>StudyBuddy - Notes</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <h1>📝 Notes</h1>
+
+        <p style="text-align: center;">
+            Save and review your study notes.
+        </p>
+
+
+        <input
+            type="text"
+            id="noteTitle"
+            placeholder="Note title"
+        >
+
+
+        <textarea
+            id="noteText"
+            placeholder="Write your note here..."
+        ></textarea>
+
+
+        <button onclick="saveNote()">
+            💾 Save Note
+        </button>
+
+
+        <input
+            type="text"
+            id="noteSearch"
+            placeholder="🔍 Search your notes..."
+            oninput="searchNotes()"
+        >
+
+
+        <button onclick="goHome()">
+            ← Back to Home
+        </button>
+
+
+        <div id="notesList"></div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

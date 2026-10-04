@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#4f46e5"
+    >
+
+    <title>StudyBuddy - Study Timer</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <h1>⏱️ Study Timer</h1>
+
+        <p style="text-align: center;">
+            Focus for 25 minutes, then take a short break.
+        </p>
+
+
+        <!-- TIMER -->
+
+        <div class="note">
+
+            <h3 style="text-align: center;">
+                🎯 Focus Session
+            </h3>
+
+            <div id="timer">
+                25:00
+            </div>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+
+        <button onclick="startTimer()">
+            ▶️ Start
+        </button>
+
+        <button onclick="pauseTimer()">
+            ⏸️ Pause
+        </button>
+
+        <button onclick="resetTimer()">
+            🔄 Reset
+        </button>
+
+
+        <!-- STATUS -->
+
+        <p
+            id="timerStatus"
+            style="text-align: center;"
+        >
+            Ready to study 📚
+        </p>
+
+
+        <!-- HOME -->
+
+        <button onclick="goHome()">
+            ← Back to Home
+        </button>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

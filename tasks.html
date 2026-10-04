@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#4f46e5"
+    >
+
+    <title>StudyBuddy - Tasks</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <h1>✅ Tasks</h1>
+
+        <p style="text-align: center;">
+            Plan your study work and keep track of your progress.
+        </p>
+
+
+        <!-- PROGRESS -->
+
+        <div class="note">
+
+            <h3>📊 Your Progress</h3>
+
+            <p id="taskProgress">
+                0 of 0 tasks completed
+            </p>
+
+        </div>
+
+
+        <!-- ADD TASK -->
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a study task..."
+            onkeydown="handleTaskKey(event)"
+        >
+
+        <button onclick="addTask()">
+            ➕ Add Task
+        </button>
+
+
+        <!-- FILTERS -->
+
+        <div
+            style="
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 8px;
+                margin-top: 10px;
+            "
+        >
+
+            <button onclick="setTaskFilter('all')">
+                All
+            </button>
+
+            <button onclick="setTaskFilter('active')">
+                Active
+            </button>
+
+            <button onclick="setTaskFilter('completed')">
+                Done
+            </button>
+
+        </div>
+
+
+        <!-- TASK LIST -->
+
+        <ul id="taskList"></ul>
+
+
+        <!-- CLEAR COMPLETED -->
+
+        <button onclick="clearCompletedTasks()">
+            🧹 Clear Completed
+        </button>
+
+
+        <!-- HOME -->
+
+        <button onclick="goHome()">
+            ← Back to Home
+        </button>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
