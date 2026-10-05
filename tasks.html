@@ -28,21 +28,20 @@
 
     <div class="app">
 
-        <h1>✅ Tasks</h1>
+        <!-- HEADER -->
 
-        <p style="text-align: center;">
-            Plan your study work and keep track of your progress.
-        </p>
+        <div class="app-header">
 
+            <div class="brand-icon">
+                ✅
+            </div>
 
-        <!-- PROGRESS -->
+            <h1>
+                Tasks
+            </h1>
 
-        <div class="note">
-
-            <h3>📊 Your Progress</h3>
-
-            <p id="taskProgress">
-                0 of 0 tasks completed
+            <p>
+                Organize your study tasks
             </p>
 
         </div>
@@ -50,39 +49,20 @@
 
         <!-- ADD TASK -->
 
-        <input
-            type="text"
-            id="taskInput"
-            placeholder="Enter a study task..."
-            onkeydown="handleTaskKey(event)"
-        >
+        <div class="note">
 
-        <button onclick="addTask()">
-            ➕ Add Task
-        </button>
+            <h3>
+                ➕ Add a Task
+            </h3>
 
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task..."
+            >
 
-        <!-- FILTERS -->
-
-        <div
-            style="
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 8px;
-                margin-top: 10px;
-            "
-        >
-
-            <button onclick="setTaskFilter('all')">
-                All
-            </button>
-
-            <button onclick="setTaskFilter('active')">
-                Active
-            </button>
-
-            <button onclick="setTaskFilter('completed')">
-                Done
+            <button onclick="addTask()">
+                Add Task
             </button>
 
         </div>
@@ -90,21 +70,69 @@
 
         <!-- TASK LIST -->
 
-        <ul id="taskList"></ul>
+        <div class="note">
+
+            <h3>
+                📋 My Tasks
+            </h3>
+
+            <ul id="taskList"></ul>
+
+        </div>
 
 
-        <!-- CLEAR COMPLETED -->
+        <!-- BOTTOM NAVIGATION -->
 
-        <button onclick="clearCompletedTasks()">
-            🧹 Clear Completed
-        </button>
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-item"
+                onclick="goHome()"
+            >
+                🏠
+                <span>Home</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openNotes()"
+            >
+                📝
+                <span>Notes</span>
+            </button>
+
+            <button
+                class="nav-item active"
+                onclick="openTasks()"
+            >
+                ✅
+                <span>Tasks</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openQuizzes()"
+            >
+                🧠
+                <span>Quiz</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTimer()"
+            >
+                ⏱️
+                <span>Timer</span>
+            </button>
+
+        </nav>
 
 
-        <!-- HOME -->
+        <!-- FOOTER -->
 
-        <button onclick="goHome()">
-            ← Back to Home
-        </button>
+        <p class="app-footer">
+            StudyBuddy • Study smarter 🎓
+        </p>
 
     </div>
 
