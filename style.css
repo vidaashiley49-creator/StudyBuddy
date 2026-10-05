@@ -1,6 +1,6 @@
-/* ================================
-   STUDYBUDDY - MAIN DESIGN
-================================ */
+/* =================================
+   STUDYBUDDY - PROFESSIONAL DESIGN
+================================= */
 
 * {
     box-sizing: border-box;
@@ -8,112 +8,263 @@
 
 body {
     margin: 0;
+
     font-family: Arial, sans-serif;
-    background: #eef2ff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #e0e7ff
+        );
+
     color: #1f2937;
+
     min-height: 100vh;
-    padding-bottom: 40px;
+
+    padding-bottom: 90px;
 }
 
 
-/* ================================
+/* =================================
    APP CONTAINER
-================================ */
+================================= */
 
 .app {
     width: 100%;
+
     max-width: 520px;
+
     min-height: 100vh;
+
     margin: auto;
+
     background: #ffffff;
-    padding: 25px 20px;
+
+    padding: 30px 20px 110px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.08);
 }
 
 
-/* ================================
+/* =================================
+   APP HEADER
+================================= */
+
+.app-header {
+    text-align: center;
+
+    padding: 10px 0 5px;
+}
+
+.brand-icon {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #6366f1
+        );
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(79, 70, 229, 0.25);
+}
+
+.app-header h1 {
+    margin: 5px 0 8px;
+}
+
+.app-header p {
+    margin-top: 0;
+}
+
+
+/* =================================
    HEADINGS
-================================ */
+================================= */
 
 h1 {
     text-align: center;
+
     margin: 5px 0 10px;
-    font-size: 32px;
+
+    font-size: 34px;
+
     color: #4f46e5;
+
+    letter-spacing: -1px;
 }
 
 h2 {
     margin-top: 25px;
+
     color: #1f2937;
 }
 
 h3 {
     margin-top: 0;
+
     color: #4f46e5;
 }
 
 p {
     color: #6b7280;
+
     line-height: 1.6;
 }
 
 
-/* ================================
+/* =================================
+   WELCOME CARD
+================================= */
+
+.welcome-card {
+    margin-top: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff
+        );
+
+    border: none;
+}
+
+
+/* =================================
+   MENU TITLE
+================================= */
+
+.menu-title {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 20px;
+}
+
+
+/* =================================
    HOME MENU
-================================ */
+================================= */
 
 .menu {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 30px;
+
+    gap: 16px;
+
+    margin-top: 20px;
 }
 
 .menu button {
-    min-height: 130px;
+    min-height: 145px;
+
     padding: 20px 10px;
+
     font-size: 18px;
+
     font-weight: bold;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    color: #4f46e5;
+
+    border: 2px solid #e5e7eb;
+
+    box-shadow:
+        0 6px 16px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.menu button:hover {
+    transform: translateY(-5px);
+
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 12px 25px
+        rgba(79, 70, 229, 0.15);
+}
+
+.menu button:active {
+    transform: scale(0.97);
 }
 
 
-/* ================================
-   BUTTONS
-================================ */
+/* =================================
+   NORMAL BUTTONS
+================================= */
 
 button {
     width: 100%;
+
     padding: 14px;
+
     margin-top: 10px;
 
     border: none;
+
     border-radius: 12px;
 
     background: #4f46e5;
+
     color: white;
 
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
 
     transition:
         transform 0.15s ease,
+        box-shadow 0.15s ease,
         opacity 0.15s ease;
 }
 
 button:hover {
-    opacity: 0.9;
+    opacity: 0.95;
+
     transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(79, 70, 229, 0.2);
 }
 
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
 }
 
 
-/* ================================
+/* =================================
    INPUTS
-================================ */
+================================= */
 
 input,
 textarea,
@@ -121,48 +272,61 @@ select {
     width: 100%;
 
     padding: 14px;
+
     margin-top: 10px;
 
     border: 1px solid #d1d5db;
+
     border-radius: 12px;
 
     background: #f9fafb;
 
     font-size: 16px;
+
     font-family: Arial, sans-serif;
 
     outline: none;
+
+    transition: 0.2s ease;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     border-color: #4f46e5;
+
     background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 70, 229, 0.1);
 }
 
 textarea {
     height: 160px;
+
     resize: vertical;
 }
 
 
-/* ================================
-   NOTES
-================================ */
+/* =================================
+   CARDS
+================================= */
 
 .note {
-    background: #f8f9ff;
+    background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
-    padding: 16px;
-    margin-top: 15px;
+    padding: 18px;
 
-    border-radius: 14px;
+    margin-top: 16px;
+
+    border-radius: 16px;
 
     box-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.05);
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
 }
 
 .note p {
@@ -170,12 +334,74 @@ textarea {
 }
 
 
-/* ================================
+/* =================================
+   PROGRESS DASHBOARD
+================================= */
+
+.progress-card {
+    margin-top: 20px;
+}
+
+.progress-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.progress-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 115px;
+
+    padding: 12px;
+
+    background: #f8f9ff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.progress-icon {
+    font-size: 26px;
+
+    margin-bottom: 8px;
+}
+
+.progress-item strong {
+    color: #4f46e5;
+
+    font-size: 20px;
+}
+
+.progress-item small {
+    margin-top: 5px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =================================
    TASKS
-================================ */
+================================= */
 
 ul {
     padding: 0;
+
     margin-top: 20px;
 }
 
@@ -183,57 +409,68 @@ li {
     list-style: none;
 
     display: flex;
+
     align-items: center;
 
     gap: 8px;
 
-    background: #f8f9ff;
+    background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
     margin-top: 10px;
+
     padding: 12px;
 
     border-radius: 12px;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, 0.04);
 }
 
 li span {
     flex: 1;
+
     line-height: 1.4;
 }
 
 li button {
     width: auto;
+
     min-width: 45px;
 
     margin-top: 0;
+
     padding: 10px;
 }
 
 
-/* ================================
+/* =================================
    QUIZ
-================================ */
+================================= */
 
 #score {
     text-align: center;
 
     font-size: 18px;
+
     font-weight: bold;
 
     color: #4f46e5;
 
     background: #eef2ff;
 
-    padding: 10px;
+    padding: 12px;
 
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 #question {
     margin-top: 30px;
 
     font-size: 22px;
+
     line-height: 1.4;
 
     text-align: center;
@@ -244,16 +481,20 @@ li button {
 }
 
 #answers button {
-    background: #f3f4f6;
+    background: #f8fafc;
+
     color: #1f2937;
 
     border: 2px solid #e5e7eb;
 
     text-align: left;
+
+    box-shadow: none;
 }
 
 #answers button:hover {
     background: #eef2ff;
+
     border-color: #4f46e5;
 }
 
@@ -268,14 +509,15 @@ li button {
 }
 
 
-/* ================================
+/* =================================
    TIMER
-================================ */
+================================= */
 
 #timer {
     text-align: center;
 
     font-size: 65px;
+
     font-weight: bold;
 
     color: #4f46e5;
@@ -286,35 +528,201 @@ li button {
 }
 
 
-/* ================================
-   MOBILE RESPONSIVE DESIGN
-================================ */
+/* =================================
+   STUDY TIP
+================================= */
+
+.study-tip {
+    margin-top: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf5,
+            #fff7ed
+        );
+}
+
+
+/* =================================
+   BOTTOM NAVIGATION
+================================= */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 30px);
+
+    max-width: 490px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 4px;
+
+    padding: 8px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+.bottom-nav .nav-item {
+    width: 100%;
+
+    min-height: 58px;
+
+    margin: 0;
+
+    padding: 7px 3px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    background: transparent;
+
+    color: #6b7280;
+
+    border: none;
+
+    border-radius: 15px;
+
+    box-shadow: none;
+
+    font-size: 20px;
+}
+
+.bottom-nav .nav-item span {
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.bottom-nav .nav-item:hover {
+    transform: none;
+
+    background: #f3f4f6;
+
+    color: #4f46e5;
+
+    box-shadow: none;
+}
+
+.bottom-nav .nav-item.active {
+    background: #eef2ff;
+
+    color: #4f46e5;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.app-footer {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    color: #9ca3af;
+}
+
+
+/* =================================
+   MOBILE DESIGN
+================================= */
 
 @media (max-width: 450px) {
 
     .app {
-        padding: 20px 15px;
+        padding:
+            25px
+            15px
+            110px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 29px;
+    }
+
+    .brand-icon {
+        width: 72px;
+
+        height: 72px;
+
+        font-size: 36px;
     }
 
     .menu {
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+
+        gap: 12px;
     }
 
     .menu button {
-        min-height: 110px;
+        min-height: 115px;
+
         font-size: 16px;
     }
 
+    .progress-grid {
+        gap: 8px;
+    }
+
+    .progress-item {
+        min-height: 105px;
+    }
+
     #timer {
-        font-size: 55px;
+        font-size: 52px;
     }
 
     #question {
         font-size: 20px;
+    }
+
+    .bottom-nav {
+        bottom: 10px;
+
+        width: calc(100% - 20px);
+
+        border-radius: 20px;
+    }
+
+    .bottom-nav .nav-item {
+        min-height: 54px;
+
+        font-size: 18px;
+    }
+
+    .bottom-nav .nav-item span {
+        font-size: 9px;
     }
 }
