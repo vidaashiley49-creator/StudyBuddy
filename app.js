@@ -1041,7 +1041,6 @@ function updateDashboard() {
     if (dashboardTasks) {
 
         dashboardTasks.textContent =
-            "✅ Tasks completed: " +
             completedTasks;
 
     }
@@ -1050,7 +1049,6 @@ function updateDashboard() {
     if (dashboardNotes) {
 
         dashboardNotes.textContent =
-            "📝 Notes created: " +
             savedNotes.length;
 
     }
@@ -1061,7 +1059,6 @@ function updateDashboard() {
         if (savedQuiz) {
 
             dashboardQuiz.textContent =
-                "🧠 Last quiz score: " +
                 savedQuiz.score +
                 " / " +
                 savedQuiz.total +
@@ -1072,7 +1069,7 @@ function updateDashboard() {
         } else {
 
             dashboardQuiz.textContent =
-                "🧠 Last quiz score: No quiz yet";
+                "No quiz yet";
 
         }
 
@@ -1082,7 +1079,6 @@ function updateDashboard() {
     if (dashboardSessions) {
 
         dashboardSessions.textContent =
-            "⏱️ Study sessions: " +
             sessions;
 
     }
