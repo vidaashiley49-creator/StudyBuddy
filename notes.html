@@ -28,45 +28,124 @@
 
     <div class="app">
 
-        <h1>📝 Notes</h1>
+        <!-- HEADER -->
 
-        <p style="text-align: center;">
-            Save and review your study notes.
-        </p>
+        <div class="app-header">
 
+            <div class="brand-icon">
+                📝
+            </div>
 
-        <input
-            type="text"
-            id="noteTitle"
-            placeholder="Note title"
-        >
+            <h1>
+                My Notes
+            </h1>
 
+            <p>
+                Save and review your study notes.
+            </p>
 
-        <textarea
-            id="noteText"
-            placeholder="Write your note here..."
-        ></textarea>
-
-
-        <button onclick="saveNote()">
-            💾 Save Note
-        </button>
+        </div>
 
 
-        <input
-            type="text"
-            id="noteSearch"
-            placeholder="🔍 Search your notes..."
-            oninput="searchNotes()"
-        >
+        <!-- CREATE NOTE -->
+
+        <div class="note">
+
+            <h3>
+                ✏️ Create a Note
+            </h3>
+
+            <input
+                type="text"
+                id="noteTitle"
+                placeholder="Note title"
+            >
+
+            <textarea
+                id="noteText"
+                placeholder="Write your note here..."
+            ></textarea>
+
+            <button onclick="saveNote()">
+                💾 Save Note
+            </button>
+
+        </div>
 
 
-        <button onclick="goHome()">
-            ← Back to Home
-        </button>
+        <!-- SEARCH -->
 
+        <div class="note">
+
+            <h3>
+                🔍 Find a Note
+            </h3>
+
+            <input
+                type="text"
+                id="noteSearch"
+                placeholder="Search your notes..."
+                oninput="searchNotes()"
+            >
+
+        </div>
+
+
+        <!-- NOTES -->
 
         <div id="notesList"></div>
+
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-item"
+                onclick="goHome()"
+            >
+                🏠
+                <span>Home</span>
+            </button>
+
+            <button
+                class="nav-item active"
+                onclick="openNotes()"
+            >
+                📝
+                <span>Notes</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTasks()"
+            >
+                ✅
+                <span>Tasks</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openQuizzes()"
+            >
+                🧠
+                <span>Quiz</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTimer()"
+            >
+                ⏱️
+                <span>Timer</span>
+            </button>
+
+        </nav>
+
+
+        <p class="app-footer">
+            StudyBuddy • Study smarter 🎓
+        </p>
 
     </div>
 
