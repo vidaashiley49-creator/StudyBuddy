@@ -28,18 +28,30 @@
 
     <div class="app">
 
-        <h1>⏱️ Study Timer</h1>
+        <!-- HEADER -->
 
-        <p style="text-align: center;">
-            Focus for 25 minutes, then take a short break.
-        </p>
+        <div class="app-header">
+
+            <div class="brand-icon">
+                ⏱️
+            </div>
+
+            <h1>
+                Study Timer
+            </h1>
+
+            <p>
+                Focus, study and take breaks
+            </p>
+
+        </div>
 
 
         <!-- TIMER -->
 
         <div class="note">
 
-            <h3 style="text-align: center;">
+            <h3>
                 🎯 Focus Session
             </h3>
 
@@ -47,39 +59,73 @@
                 25:00
             </div>
 
+            <button onclick="startTimer()">
+                ▶️ Start
+            </button>
+
+            <button onclick="pauseTimer()">
+                ⏸️ Pause
+            </button>
+
+            <button onclick="resetTimer()">
+                🔄 Reset
+            </button>
+
         </div>
 
 
-        <!-- CONTROLS -->
+        <!-- BOTTOM NAVIGATION -->
 
-        <button onclick="startTimer()">
-            ▶️ Start
-        </button>
+        <nav class="bottom-nav">
 
-        <button onclick="pauseTimer()">
-            ⏸️ Pause
-        </button>
+            <button
+                class="nav-item"
+                onclick="goHome()"
+            >
+                🏠
+                <span>Home</span>
+            </button>
 
-        <button onclick="resetTimer()">
-            🔄 Reset
-        </button>
+            <button
+                class="nav-item"
+                onclick="openNotes()"
+            >
+                📝
+                <span>Notes</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTasks()"
+            >
+                ✅
+                <span>Tasks</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openQuizzes()"
+            >
+                🧠
+                <span>Quiz</span>
+            </button>
+
+            <button
+                class="nav-item active"
+                onclick="openTimer()"
+            >
+                ⏱️
+                <span>Timer</span>
+            </button>
+
+        </nav>
 
 
-        <!-- STATUS -->
+        <!-- FOOTER -->
 
-        <p
-            id="timerStatus"
-            style="text-align: center;"
-        >
-            Ready to study 📚
+        <p class="app-footer">
+            StudyBuddy • Study smarter 🎓
         </p>
-
-
-        <!-- HOME -->
-
-        <button onclick="goHome()">
-            ← Back to Home
-        </button>
 
     </div>
 
