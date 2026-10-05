@@ -2,37 +2,131 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#4f46e5"
+    >
 
     <title>StudyBuddy - Quiz</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
 <body>
 
     <div class="app">
 
-        <h1>🧠 Study Quiz</h1>
+        <!-- HEADER -->
 
-        <p id="score">Score: 0</p>
+        <div class="app-header">
 
-        <h2 id="question"></h2>
+            <div class="brand-icon">
+                🧠
+            </div>
 
-        <div id="answers"></div>
+            <h1>
+                Quiz
+            </h1>
 
-        <p id="result"></p>
+            <p>
+                Test your knowledge
+            </p>
 
-        <button id="nextButton" onclick="nextQuestion()">
-            Next Question
-        </button>
+        </div>
 
-        <button onclick="goHome()">
-            ← Back to Home
-        </button>
+
+        <!-- QUIZ -->
+
+        <div class="note">
+
+            <div id="score">
+                Score: 0
+            </div>
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+            <div id="answers"></div>
+
+            <p id="result"></p>
+
+            <button
+                onclick="nextQuestion()"
+            >
+                Next Question
+            </button>
+
+        </div>
+
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-item"
+                onclick="goHome()"
+            >
+                🏠
+                <span>Home</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openNotes()"
+            >
+                📝
+                <span>Notes</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTasks()"
+            >
+                ✅
+                <span>Tasks</span>
+            </button>
+
+            <button
+                class="nav-item active"
+                onclick="openQuizzes()"
+            >
+                🧠
+                <span>Quiz</span>
+            </button>
+
+            <button
+                class="nav-item"
+                onclick="openTimer()"
+            >
+                ⏱️
+                <span>Timer</span>
+            </button>
+
+        </nav>
+
+
+        <!-- FOOTER -->
+
+        <p class="app-footer">
+            StudyBuddy • Study smarter 🎓
+        </p>
 
     </div>
+
 
     <script src="app.js"></script>
 
